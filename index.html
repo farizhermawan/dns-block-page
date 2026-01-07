@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Domain Blocked</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #020617;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --danger: #f87171;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial;
+    }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #020617, var(--bg));
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .card {
+      max-width: 520px;
+      width: 100%;
+      background: linear-gradient(180deg, #020617, #020617cc);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      border: 1px solid #020617;
+      text-align: center;
+    }
+
+    .icon {
+      font-size: 56px;
+      margin-bottom: 16px;
+      color: var(--danger);
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .info {
+      background: #020617;
+      border-radius: 10px;
+      padding: 16px;
+      text-align: left;
+      margin-bottom: 20px;
+      border: 1px solid #020617;
+    }
+
+    .info strong {
+      color: var(--accent);
+    }
+
+    .footer {
+      font-size: 0.85rem;
+      color: #64748b;
+      margin-top: 16px;
+    }
+
+    .footer span {
+      color: var(--accent);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="icon">🚫</div>
+
+    <h1>Domain Blocked</h1>
+
+    <p>
+      Access to this domain has been blocked by your network’s DNS filtering
+      policy.
+    </p>
+
+    <div class="info">
+      <p><strong>Reason</strong><br>
+      This domain is categorized as ads, tracking, malware, or unwanted content.</p>
+
+      <p><strong>What you can do</strong><br>
+      If you believe this is a mistake, please contact your network administrator
+      or whitelist the domain.</p>
+    </div>
+
+    <div class="footer">
+      Powered by <span>DNS Filtering</span><br>
+      This page is served locally and does not track you.
+    </div>
+  </div>
+</body>
+</html>
