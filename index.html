@@ -1,116 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Domain Blocked</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="robots" content="noindex, nofollow" />
-
-  <style>
-    :root {
-      --bg: #0f172a;
-      --card: #020617;
-      --text: #e5e7eb;
-      --muted: #94a3b8;
-      --accent: #38bdf8;
-      --danger: #f87171;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont,
-                   "Segoe UI", Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial;
-    }
-
-    body {
-      min-height: 100vh;
-      background: radial-gradient(circle at top, #020617, var(--bg));
-      color: var(--text);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-    }
-
-    .card {
-      max-width: 520px;
-      width: 100%;
-      background: linear-gradient(180deg, #020617, #020617cc);
-      border-radius: 16px;
-      padding: 32px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-      border: 1px solid #020617;
-      text-align: center;
-    }
-
-    .icon {
-      font-size: 56px;
-      margin-bottom: 16px;
-      color: var(--danger);
-    }
-
-    h1 {
-      font-size: 1.8rem;
-      margin-bottom: 12px;
-    }
-
-    p {
-      color: var(--muted);
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-
-    .info {
-      background: #020617;
-      border-radius: 10px;
-      padding: 16px;
-      text-align: left;
-      margin-bottom: 20px;
-      border: 1px solid #020617;
-    }
-
-    .info strong {
-      color: var(--accent);
-    }
-
-    .footer {
-      font-size: 0.85rem;
-      color: #64748b;
-      margin-top: 16px;
-    }
-
-    .footer span {
-      color: var(--accent);
-    }
-  </style>
-</head>
-
-<body>
-  <div class="card">
-    <div class="icon">🚫</div>
-
-    <h1>Domain Blocked</h1>
-
-    <p>
-      Access to this domain has been blocked by your network’s DNS filtering
-      policy.
-    </p>
-
-    <div class="info">
-      <p><strong>Reason</strong><br>
-      This domain is categorized as ads, tracking, malware, or unwanted content.</p>
-
-      <p><strong>What you can do</strong><br>
-      If you believe this is a mistake, please contact your network administrator
-      or whitelist the domain.</p>
+<html lang="en"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Oops, Site blocked</title>
+    <link rel="shortcut icon" href="./favicon.ico">
+    <meta name="theme-color" content="#0c0c0f">
+    <link href="./style.css" rel="stylesheet">
+  </head>
+  <body class="has-animations is-loaded">
+	
+    <div id="root" class="body-wrap">
+      <header class="site-header reveal-from-bottom is-revealed">
+        <div class="container">
+          
+        </div>
+      </header>
+      <main class="site-content">
+        <section class="hero section center-content illustration-section-01">
+          <div class="container-sm">
+            <div class="hero-inner section-inner">
+              <div class="hero-content">
+                <h1 class="mt-0 mb-16 reveal-from-bottom is-revealed" data-reveal-delay="200">
+                  <span>Oops, Gak Boleh Akses Situs Ini 🫢</span>
+                </h1>
+				<h5 class="mt-0 mb-16 reveal-from-bottom is-revealed" data-reveal-delay="200" id="url" style="color:#4d995f">http://127.0.0.1</h5>
+                <div class="container-xs">
+                  <p class="m-0 mb-32 reveal-from-bottom is-revealed" data-reveal-delay="400" style="color:#232323">Situs ini diblokir karena kena filter konten. Isinya diduga berbahaya, ilegal, atau bisa ngerusak perangkat kamu.</p>
+                  <div class="reveal-from-bottom mb-8 is-revealed" data-reveal-delay="600">
+                    <div class="button-group">
+                      <a class="button button-primary button-wide-mobile" href="javascript:history.back()">Go back</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="site-footer center-content-mobile">
+        <div class="container">
+          <div class="site-footer-inner">
+            <div class="footer-top space-between text-xxs">
+              <div class="brand">
+                <h1 class="m-0">
+                  <a href="https://adguard.com">
+				  <img src="./logo.png" style="width: 3em">
+                  </a>
+                </h1>
+              </div>
+            </div>
+            <div class="footer-bottom space-between text-xxs invert-order-desktop">
+				<div class="footer-copyright">
+					<span id="ip"></span>
+					<br><span id="datetime"></span></td>
+				</div>
+              <nav class="footer-nav">
+                <ul class="list-reset">
+                  <li></li>
+                  <li>
+                    <a href="https://dns.farizhermawan.web.id" target="_blank" rel="noopener noreferrer">Admin Settings</a>
+                  </li>
+				  <li>
+                    <a href="https://adguard.com" target="_blank" rel="noopener noreferrer">About</a>
+				  
+				  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
+<script type="application/javascript">
+  function getIP(json) {
+	document.getElementById("ip").innerHTML =
+	"External IP: " + json.ip;
+  }
+</script>
 
-    <div class="footer">
-      Powered by <span>DNS Filtering</span><br>
-      This page is served locally and does not track you.
-    </div>
-  </div>
-</body>
-</html>
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&amp;callback=getIP"></script>
+<script>
+	document.getElementById("url").innerHTML =
+	window.location.origin;
+</script>
+<script>
+	var dt = new Date();
+	document.getElementById("datetime").innerHTML = 
+	"Accessed on: " + (("0"+dt.getDate()).slice(-2)) +"/"+ (("0"+(dt.getMonth()+1)).slice(-2)) +"/"+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2)) +":"+ (("0"+dt.getSeconds()).slice(-2));
+</script>
+</body></html>
